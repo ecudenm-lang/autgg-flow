@@ -1,0 +1,58 @@
+# DOC 21 — Banco de Hooks para Producción
+### Cold traffic Meta/TikTok · Español México · Suplemento hepático en gotas
+
+> Hooks derivados del corpus real de 13,548 confesiones + mecanismo "El hígado tapado" (DOC 19). Cada hook lleva su **cita origen** [plataforma·engagement]. Compliance: "apoya/ayuda a", nunca "cura".
+
+**Veredicto:** gancho = hinchazón→hígado · villano = frituras/azúcar (no alcohol) · gran idea = des-culpabilización · natural.
+
+
+## Ángulo Líder — Hinchazón → Hígado tapado
+
+| # | Hook | Conciencia | Sub-avatar | Formato | Cita origen |
+|---|---|---|---|---|---|
+| 1 | Te inflamas como globo cada que comes y ya te encanta jugar a la embarazada... pero eso no es normal. | Inconsciente | Core | Ambos | me encanta jugar a la embarazada cada q me inflamo de la panza [ES·tiktok·697800] |
+| 2 | Hasta el agua te inflama y sientes la panza pesada todo el dia. No es antojo tuyo, algo mas arriba no esta drenando. | Consc. Problema | Core | Ambos | hasta el agua te inflama, te falta energia [ES·instagram·2225] |
+| 3 | Te levantas con la panza plana y terminas el dia hinchada. No siempre es lo que cenaste: revisa tu higado. | Consc. Problema | Core | Meta | Te levantas con el abdomen plano y terminas el dia inflamada? [ES·instagram·93] |
+| 4 | Desinflamar tu panza HOY empieza por destapar el higado, no por otra receta que limpia el tubo equivocado. | Consc. Solución | Core | Ambos | Abdomen Inflamado? Desinflalo Con Esto Hoy Mismo [ES·instagram·10608] |
+| 5 | Cuando tu higado vuelve a drenar la bilis, la comida deja de estancarse y tu panza baja. Se llama destape hepatico. | Consc. Solución | Core | Meta | me ayuda con la inflamacion abdominal y la digestion [ES·mercadolibre·30] |
+| 6 | Panza plana desde el higado, no desde la dieta: 3 llaves en gotas que ayudan a destapar tu drenaje hepatico. | Consc. Producto | Core | Ambos | Me ha hecho mucho bien a mi higado... me ayuda con la inflamacion abdominal y la digestion [ES·mercadolibre·30] |
+| 7 | Quitaste el gluten, los lacteos y el azucar... y seguiste hinchada. No era el pan, era tu higado tapado. | Consc. Problema | Hinchada Cronica | Ambos | Quitar el gluten, los lacteos o el azucar no te desinflamo? Esta puede ser la verdadera razon [ES·instagram·250] |
+| 8 | Probaste el kefir de moda y terminaste hinchada como globo. La causa no estaba en tu plato, sino en tu higado. | Consc. Problema | Hinchada Cronica | TikTok | terminas con el abdomen hinchado como un globo [ES·instagram·2160] |
+| 9 | Cambiaste ingredientes, compraste versiones saludables y sigues inflamada. Quiza el problema nunca fue tu comida. | Consc. Problema | Hinchada Cronica | Meta | Si has probado quitar alimentos, cambiar ingredientes o comprar versiones mas saludables y sigues sintiendote inflamada [ES·instagram·698] |
+| 10 | No es tu falta de disciplina ni el pan de cada dia. Es tu higado que dejo de drenar y todo se te queda estancado. | Consc. Solución | Hinchada Cronica | Ambos | muchas mujeres sienten que tienen que renunciar al pan para desinflamarse... el problema no siempre es el pan [ES·instagram·5945] |
+| 11 | Entre tamales, ponche y cenas pesadas le tapaste el drenaje a tu higado. Por eso vives hinchada, no por comer de mas. | Consc. Solución | Hinchada Cronica | Ambos | Entre tamales, ponche, rompope, cenas pesadas y horarios del caos... Inflamacion, gases, estreñimiento [ES·tiktok·54500] |
+| 12 | Si te quitaron la vesicula y desde entonces cargas la panza pesada e inflamada, tu higado necesita ayuda para drenar. | Consc. Producto | Hinchada Cronica | Ambos | Si te quitaron la vesicula y desde entonces tienes digestion pesada, gases, diarrea o reflujo, esto no es casualidad [ES·tiktok·34700] |
+
+## Identidad Reclamada + Emoción + Des-culpabilización
+
+| # | Hook | Conciencia | Sub-avatar | Formato | Cita origen |
+|---|---|---|---|---|---|
+| 1 | Ya me cansé de jugar a la embarazada cada que se me infla la panza. No es normal, es mi hígado. | Consc. Problema | Mujer 35-50 que se ve panzona todo el día | TikTok | me encanta jugar a la embarazada cada q me inflamo de la panza [ES·tiktok·697800] |
+| 2 | Me levanto con la panza plana y para las 2 de la tarde ya parezco de 5 meses. Quiero volver a sentirme yo. | Consc. Problema | Mujer que se desinfla en la mañana y se hincha en el día | Ambos | ¿Te levantas con el abdomen plano y terminas el día inflamada? [ES·instagram·93] |
+| 3 | Quité el gluten, quité los lácteos, quité el azúcar… y sigo igual de inflada. No es tu disciplina, amiga, es tu hígado. | Consc. Solución | Mujer que ya eliminó alimentos y no vio cambio | Ambos | ¿Quitar el gluten, los lácteos o el azúcar no te desinflamó? [ES·instagram·250] |
+| 4 | Me decían que renunciara al pan para desinflarme. Llevo años sin pan y sigo hinchada. El problema nunca fue el pan. | Consc. Solución | Mujer +40 que sacrificó el pan sin resultados | Meta | muchas mujeres sienten que tienen que renunciar al pan para desinflamarse... el problema no siempre es el pan [ES·instagram·5945] |
+| 5 | Como igual de bien toda la semana y aun así amanezco hinchada, cansada y de mal humor. Ya no sé qué más hacer. | Consc. Problema | Mujer disciplinada frustrada porque nada funciona | Ambos | comes 'igual de bien' toda la semana, pero una semana te sientes ligera y la otra hinchada, cansada [ES·instagram·2025] |
+| 6 | He probado el kéfir, la chía, las versiones 'saludables'… y sigo sintiéndome inflada como globo. Ya me di por vencida. | Consc. Solución | Mujer que probó modas de bienestar sin éxito | TikTok | Si has probado quitar alimentos, cambiar ingredientes o comprar versiones 'más saludables' y sigues sintiéndote inflamada [ES·instagram·698] |
+| 7 | Me da pena mi propia panza. Ya no me queda la ropa pegada. Solo quiero volver a sentirme ligera y cómoda conmigo. | Consc. Problema | Mujer que esconde su abdomen y evita cierta ropa | Ambos | para que te sientas más ligera, enérgica y cómoda con tu ropa [ES·instagram·2225] |
+| 8 | Ya hasta el agua siento que me infla. No es que esté loca ni exagerando: algo adentro no está drenando bien. | Consc. Problema | Mujer que se hincha con cualquier cosa y se siente incomprendida | TikTok | si sientes que hasta el agua te inflama [ES·instagram·2225] |
+| 9 | Todas las noches me acuesto con la panza dura y pesada, aunque cené ligerito. Juro que no es lo que cené. | Consc. Problema | Mujer que se hincha de noche pese a cenar ligero | Meta | el problema no siempre es lo que cenaste [ES·instagram·854] |
+| 10 | Vivo inflada y cansada, con la panza abultada aunque coma sano. No es mala suerte ni genética, algo más está pasando. | Consc. Problema | Mujer que come sano pero sigue abultada y fatigada | Ambos | si tienes hígado graso y sigues comiendo esto, no es genética, no es mala suerte [ES·tiktok·16200] |
+| 11 | Ando con el abdomen abultado, con fatiga y la digestión pesada. Extraño a la que era antes, la que se sentía ligera. | Consc. Problema | Mujer que perdió su energía y ligereza de antes | Ambos | Abdomen abultado e inflamado o estancado. Fatiga y molestias digestivas [ES·instagram·620] |
+| 12 | Me quité mil cosas de la comida y nada. Neta ya no es tu fuerza de voluntad: revisa cómo anda tu hígado. | Consc. Solución | Mujer que se culpa de no tener disciplina suficiente | TikTok | Si has eliminado gluten, lácteos o azúcar y sigues con inflamación, abdomen pesado... Porque muchas veces el problema no era ese alimento [ES·instagram·250] |
+
+## Anti-competidor + Villano (comida MX) + Prueba
+
+| # | Hook | Conciencia | Sub-avatar | Formato | Cita origen |
+|---|---|---|---|---|---|
+| 1 | Entre tamales, ponche y cenas pesadas tu digestión termina estresada… pero el que no drena es tu hígado. | Consc. Problema | Mujer 35-55 MX que se hincha en temporadas de comilonas (fiestas, posadas) y culpa a la comida | Ambos | Entre tamales, ponche, rompope, cenas pesadas y horarios del caos… nuestro sistema digestivo termina estresado. [ES·tiktok·54500] |
+| 2 | No es la fritura ni tu falta de disciplina: es tu hígado, que dejó de drenar y te estanca la panza. | Consc. Problema | Mujer que se echa la culpa por comer frituras y no verse plana | Meta | si tienes hígado graso y sigues comiendo esto, ❌ no es genética ❌ no es mala suerte 👉 es bioquímica [ES·tiktok·16200] |
+| 3 | La fritura y el azúcar se van directo a tu hígado. Cuando se tapa, la comida no baja y te infla como globo. | Consc. Problema | Consumidora de refresco y antojitos que vive inflamada tras comer | Ambos | La fructosa va directo al hígado y se convierte en grasa hepática [ES·tiktok·16200] |
+| 4 | Te sumaste a la moda del kéfir y terminaste hinchada como globo. La causa no estaba en tu plato: era tu hígado. | Consc. Solución | Mujer que probó probióticos y kéfir de moda sin desinflarse | Meta | ¿Has intentado sumarte a la moda del Kéfir y terminas con el abdomen hinchado como un globo…? [ES·instagram·2160] |
+| 5 | Nos vendieron que 'a más probióticos, mejor' y seguimos hinchadas. Quizá limpiabas el tubo equivocado. | Consc. Solución | Mujer que gastó en probióticos y greens sin resultado | Ambos | Nos han vendido que 'a más probióticos, mejor'... [ES·instagram·2160] |
+| 6 | Quitaste el gluten, los lácteos y hasta probaste el detox de moda… y seguiste inflamada. No era tu comida. | Consc. Solución | Mujer que ha eliminado alimentos y probado detox sin desinflarse | Meta | Si has eliminado gluten, lácteos o azúcar y sigues con inflamación, abdomen pesado o falta de energía, esto te interesa. Porque muchas veces el problema no era ese alimento. [ES·instagram·250] |
+| 7 | Contaste calorías, saltaste comidas, cortaste carbos… y te culpaste cada vez. ¿Y si nunca fue tu disciplina? | Consc. Problema | Mujer agotada de dietas y esfuerzo que se culpa a sí misma | Meta | Maybe you're reading this thinking… 'I've already tried all of that.' You've counted calories. You've skipped meals. You've cut carbs. [EN·instagram·69] |
+| 8 | Un suplemento en gotas que apoya tu hígado y ayuda a mantener tus enzimas hepáticas en niveles sanos. | Consc. Producto | Mujer que ya se hizo análisis o sabe de hígado graso y busca prueba blanda | Ambos | ¿Abdomen Inflamado? Desínflalo Con Esto Hoy Mismo. Te comparto una receta para ayudar a desinflamarte [ES·instagram·10608] |
+| 9 | Cuando tu hígado vuelve a drenar, la panza baja… y muchas mujeres dicen sentirse más ligeras y con energía. | Consc. Solución | Mujer que quiere sentirse ligera y con energía, no medicalizada | Ambos | descubre como desinflamar y reducir el abdomen abultado... para que te sientas más ligera, enérgica y cómoda con tu ropa [ES·instagram·2225] |
+| 10 | Me ayudó con la inflamación y la digestión, y hasta con la molestia de la vesícula. Y es en gotas, no pastillas. | Consc. Producto | Mujer que busca reseñas reales antes de comprar, prefiere natural | Ambos | Me ha hecho mucho bien a mi hígado, se me quitó el dolor de vesícula biliar por completo, y me ayuda con la inflamación abdominal y la digestion. [ES·mercadolibre·30] |
+| 11 | Las pastillas se pierden en el estómago. En gotas llega directo a apoyar el destape de tu hígado. | Consc. Producto | Mujer harta de tragar pastillas grandes que no siente que funcionen | Ambos | Easy to swallow great for the price cause it works [EN·amazon·9] |
+| 12 | En gotas y sin sabor amargo: apoya tu hígado a destaparse sin tragar tres pastillas cada mañana. | Consc. Producto | Mujer que quiere algo natural y fácil de tomar, evita pastillas y sabores fuertes | TikTok | Lo tomo sin azúcar no sabe amargo yo me siento mucho mejor cuando me lo tomo [ES·mercadolibre·7] |
