@@ -1,0 +1,25 @@
+# Claves y secretos — NUNCA subir
+.env
+**/apify_token.txt
+**/trendtrack_token.txt
+**/*_key.txt
+kling/config/api_config.json
+
+# Dependencias
+**/node_modules/
+
+# Cache de modelos whisper (~1.5GB, se descargan solos)
+**/assets/hf_cache/
+
+# Salidas de trabajo
+output/
+**/output/
+**/clips/
+**/audio/
+_tmp_*/
+*.mp4
+*.wav
+*.ass
+
+# Datos crudos de research (grandes; cada quien corre su propio scraping)
+fase0-apify/raw/

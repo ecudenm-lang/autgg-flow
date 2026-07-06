@@ -1,0 +1,10 @@
+{
+  "name": "autgg-flow",
+  "version": "1.0.0",
+  "description": "Flow completo AutGG: Fase 0 (research Apify) · Etapa 3 (Pegasus análisis visual) · Etapa 4 (Kling producción).",
+  "type": "commonjs",
+  "scripts": {
+    "doctor": "node doctor.mjs",
+    "smoke": "node doctor.mjs --smoke"
+  }
+}

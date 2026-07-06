@@ -1,0 +1,14 @@
+{
+  "name": "klingaut-starter",
+  "version": "1.0.0",
+  "description": "Kit de arranque portable del pipeline de video Klingaut (Kling 3.0 + nano-banana, flujo voz-primero) + post-produccion (subtitulos CapCut, TTS).",
+  "type": "commonjs",
+  "scripts": {
+    "doctor": "node doctor.mjs",
+    "smoke": "node doctor.mjs --smoke"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.10.1",
+    "axios": "^1.16.1"
+  }
+}

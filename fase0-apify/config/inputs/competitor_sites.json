@@ -1,0 +1,11 @@
+{
+  "_comment": "Competidores: Primal Remedies (gemelo canela+MCT) + landings. Extrae claims/copy/precio/ingredientes. Crawler FREE (solo compute).",
+  "startUrls": [
+    { "url": "https://primal-remedies.com/products/ceylon-cinnamon-7200mg" },
+    { "url": "https://primal-remedies.com/" }
+  ],
+  "maxCrawlPages": 8,
+  "crawlerType": "playwright:firefox",
+  "saveMarkdown": true,
+  "proxyConfiguration": { "useApifyProxy": true }
+}

@@ -1,0 +1,7 @@
+# Dependencias Python — SOLO necesarias para la post-producción (postpro/).
+# El CORE (voz → video montado) NO necesita Python.
+#
+# Instalar con:  pip install -r requirements.txt
+#
+faster-whisper>=1.0.0    # subtítulos CapCut (capcut_subs.py) + segmentos (whisper_segments.py)
+Pillow>=10.0.0           # banner de hook (banner_hook.py)

@@ -1,0 +1,8 @@
+{
+  "_comment": "TODO: poner URLs de videos en español sobre diabetes/metformina/canela con muchos comentarios. Las afinamos al primer run (puedo buscarlas con un youtube-search scraper primero).",
+  "startUrls": [
+    { "url": "https://www.youtube.com/watch?v=REEMPLAZAR" }
+  ],
+  "maxComments": 200,
+  "commentsSortBy": "top"
+}

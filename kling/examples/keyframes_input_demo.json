@@ -1,0 +1,16 @@
+[
+  {
+    "n": "01",
+    "kf_prompt": "3D Pixar style character, warm cinematic lighting, soft amber home tones. A tired Hispanic man about 55, gray-streaked hair, blue shirt, sitting at his kitchen table looking at a glucose meter with worry. Plano medio. Vertical 9:16.",
+    "kf_ref_urls": null,
+    "anim_prompt": "The man slowly lifts the glucose meter and sighs, shoulders dropping. Slow push-in toward his face. negative_prompt: floating in void, spinning, deformed hands, deformed face, extra fingers, text, watermark, blurry",
+    "duration": "5"
+  },
+  {
+    "n": "02",
+    "kf_prompt": "3D Pixar style infographic scene, warm amber lighting, clean soft background. A stylized 3D body cell with a small door stuck shut, golden sugar particles piling up outside it. Vertical 9:16.",
+    "kf_ref_urls": null,
+    "anim_prompt": "The stuck cell door slowly opens and the golden sugar particles flow inside. Slow push-in. negative_prompt: floating in void, spinning, weightless, text artifacts, watermark, blurry",
+    "duration": "5"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "youtube_comments_es",
+    "actor": "streamers/youtube-comments-scraper",
+    "inputFile": "config/inputs/youtube_comments_es.json",
+    "bucket": "voc",
+    "note": "Comentarios de videos en español sobre diabetes/metformina/canela. VoC purísima ES/MX."
+  },
+  {
+    "name": "tiktok_diabetes_es",
+    "actor": "clockworks/tiktok-scraper",
+    "inputFile": "config/inputs/tiktok_diabetes_es.json",
+    "bucket": "trends",
+    "note": "Videos por hashtag (#diabetes #azucarensangre #metformina). Ganchos/formatos que rinden ahora."
+  },
+  {
+    "name": "amazon_reviews_canela_es",
+    "actor": "junglee/amazon-reviews-scraper",
+    "inputFile": "config/inputs/amazon_reviews_canela_es.json",
+    "bucket": "voc",
+    "note": "Reviews amazon.es de canela Ceilan/berberina. 1-2 estrellas=objeciones, 5=por que compran."
+  },
+  {
+    "name": "reddit_diabetes",
+    "actor": "trudax/reddit-scraper-lite",
+    "inputFile": "config/inputs/reddit_diabetes.json",
+    "bucket": "voc",
+    "note": "r/diabetes_t2, r/prediabetes, r/diabetes (ingles, gran volumen). Quejas metformina, food noise."
+  },
+  {
+    "name": "competitor_ads_meta",
+    "actor": "apify/facebook-ads-scraper",
+    "inputFile": "config/inputs/competitor_ads_meta.json",
+    "bucket": "competencia",
+    "note": "Ad Library: ads activos de competidores (Glucora, Primal, Nutrissa) en ES/MX. Que corren y desde cuando."
+  },
+  {
+    "name": "competitor_sites",
+    "actor": "apify/website-content-crawler",
+    "inputFile": "config/inputs/competitor_sites.json",
+    "bucket": "competencia",
+    "note": "Paginas de producto de competidores: precios, claims, ingredientes, ofertas."
+  }
+]

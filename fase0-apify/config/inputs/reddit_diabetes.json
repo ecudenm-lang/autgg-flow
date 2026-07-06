@@ -1,0 +1,16 @@
+{
+  "startUrls": [
+    { "url": "https://www.reddit.com/r/diabetes_t2/top/?t=year" },
+    { "url": "https://www.reddit.com/r/prediabetes/top/?t=year" },
+    { "url": "https://www.reddit.com/r/diabetes/top/?t=year" },
+    { "url": "https://www.reddit.com/r/Type2Diabetes/top/?t=year" },
+    { "url": "https://www.reddit.com/r/insulinresistance/top/?t=year" }
+  ],
+  "type": "posts",
+  "sort": "top",
+  "time": "year",
+  "maxItems": 220,
+  "maxPostCount": 45,
+  "maxComments": 12,
+  "proxy": { "useApifyProxy": true }
+}

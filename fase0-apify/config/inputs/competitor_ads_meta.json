@@ -1,0 +1,9 @@
+{
+  "_comment": "Ad Library de Meta por palabra clave o por anunciante. ES y MX. Competidores conocidos: Glucora Lab, Primal Remedies, Nutrissa. Afinar URLs al primer run.",
+  "urls": [
+    { "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ES&q=canela%20ceilan&search_type=keyword_unordered" },
+    { "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MX&q=berberina&search_type=keyword_unordered" }
+  ],
+  "count": 200,
+  "scrapePageAds.activeStatus": "all"
+}

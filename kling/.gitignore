@@ -1,0 +1,20 @@
+# Claves y secretos — NUNCA subir
+.env
+config/api_config.json
+config/*_key.txt
+
+# Dependencias
+node_modules/
+
+# Cache de modelos whisper (se descargan solos, ~1.5GB)
+assets/hf_cache/
+
+# Salidas de trabajo (videos, clips, audio, keyframes generados)
+output/
+clips/
+audio/
+assets/*/kf_*.png
+_tmp_*/
+*.mp4
+*.wav
+*.ass

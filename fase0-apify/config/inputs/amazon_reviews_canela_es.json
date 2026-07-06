@@ -1,0 +1,9 @@
+{
+  "_comment": "TODO: poner URLs de producto de amazon.es (canela Ceilan, berberina, supplementos azucar). 1-2 estrellas=objeciones, 4-5=por que compran. Afinar al primer run.",
+  "productUrls": [
+    { "url": "https://www.amazon.es/dp/REEMPLAZAR" }
+  ],
+  "maxReviews": 150,
+  "sort": "recent",
+  "proxyConfiguration": { "useApifyProxy": true }
+}
