@@ -28,6 +28,14 @@ Cada carpeta tiene su propio README con el detalle.
 
 ## Arranque rápido (Windows)
 
+> **¿Máquina nueva?** Un solo comando hace todo (guiado, gasta $0):
+> ```powershell
+> powershell -ExecutionPolicy Bypass -File .\onboarding.ps1
+> ```
+> Detecta/instala prerequisitos (preguntando), crea el `.env`, autocompleta ffmpeg, te ayuda a poner
+> tus claves y corre el doctor. Scripteable: `-Etapas kling,pegasus`. Los pasos manuales de abajo
+> siguen valiendo si prefieres hacerlo a mano.
+
 ### 1. Prerequisitos
 - **Node.js ≥ 18** (https://nodejs.org)
 - **ffmpeg + ffprobe** — `winget install Gyan.FFmpeg` (para la Etapa 4)
