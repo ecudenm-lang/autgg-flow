@@ -14,6 +14,31 @@ Research           Análisis visual     Producción de video
 
 ---
 
+## Flujo operativo (orden de los pasos)
+
+El flow se corre **en este orden**:
+
+| Paso | Qué | Dónde | Salida |
+|---|---|---|---|
+| **1. Apify** | Research/scraping: VoC + competencia (incl. TrendTrack) | `fase0-apify/` (`tools/apify_run.ps1`, `scripts/trendtrack_*.py`) | `trendtrack_*.json`, reportes |
+| **2. TrendTrack Dossier** | Score de coincidencia (guion vs ficha) + dossier de todos los ads | `fase0-apify/scripts/` (`trendtrack_score_prep.mjs` → Claude puntúa → `trendtrack_dossier.mjs`) | `score_worksheet.json`, `Dossier_Videos.md` |
+| **3. Videos** | Análisis visual (Pegasus) + producción (Kling) del ganador | `pegasus/` + `kling/` | `output/pegasus_*.json`, `final_*_voiced.mp4` |
+| **4. Growth Guide** | Registro histórico: hit rate, métricas soft, patrones | *(por definir)* | *(pendiente)* |
+
+**Paso 2 en detalle** (bridge research → producción):
+```powershell
+# a) armar la planilla desde la salida de TrendTrack
+node fase0-apify/scripts/trendtrack_score_prep.mjs "<carpeta_trendtrack>" ficha_biozentra.json score_worksheet.json
+# b) Claude llena la coincidencia (avatar/nivel/mensaje/deseo/%) por fila
+# c) generar el dossier con todos los datos + score
+node fase0-apify/scripts/trendtrack_dossier.mjs score_worksheet.json Dossier_Videos.md
+```
+Cadena de fallback del guion: **transcript → copy → Pegasus** (ver `fase0-apify/SCORE_COINCIDENCIA.md`).
+
+> **Paso 4 (Growth Guide) aún no está definido** — será el registro final que cierra el loop. Se actualizará aquí cuando se defina.
+
+---
+
 ## Estructura
 
 | Carpeta | Etapa | Qué hace | Stack |

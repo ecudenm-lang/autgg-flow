@@ -27,6 +27,15 @@ node ..\pegasus\pegasus_analyze.mjs <media_url> <id>
 ```
 El JSON de Pegasus (estructura visual + rol de estilo) se usa como Fuente A cuando no hubo texto.
 
+## Generar el dossier (todos los datos + score)
+Una vez que Claude llenó la coincidencia en `score_worksheet.json`, se arma el documento maestro:
+```powershell
+node scripts\trendtrack_dossier.mjs score_worksheet.json Dossier_Videos.md
+# a Word:  powershell -File <AutGG>\md2docx.ps1 -In Dossier_Videos.md -Out Dossier_Videos.docx
+```
+`Dossier_Videos.md` = una ficha por ad con metadata + guion/copy + Ad Library link + media + score,
+ordenado por coincidencia. Es la **salida del Paso 2** del flow.
+
 ## Importante
 - El **% de coincidencia es juicio semantico** (avatar/nivel/mensaje/deseo): lo pone Claude leyendo el
   guion, NO un lexico. El script solo PREPARA la planilla y resuelve de donde sale el guion.
