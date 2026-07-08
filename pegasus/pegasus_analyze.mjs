@@ -1,5 +1,5 @@
 /**
- * pegasus_analyze.mjs — ETAPA 3 (dominio VISUAL): analiza un video con TwelveLabs Pegasus
+ * pegasus_analyze.mjs — PASO 3 (Fábrica de Videos, dominio VISUAL): analiza un video con TwelveLabs Pegasus
  * y devuelve un JSON de estructura visual, listo para alimentar la generación de prompts.
  *
  * Pegasus "ve" el video ganador y describe: formato, estructura de escenas, ritmo, tipo de

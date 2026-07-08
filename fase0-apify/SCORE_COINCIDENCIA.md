@@ -1,4 +1,4 @@
-# Score de Coincidencia sobre TrendTrack (Etapa 2 · prep)
+# Score de Coincidencia sobre TrendTrack (Paso 2 · Scraping Competencia)
 
 Arma la planilla para puntuar cada ad de la competencia contra la **ficha del Senior** (Fuente B),
 usando el guion (Fuente A) que venga de TrendTrack — con **cadena de fallback** cuando no hay guion.

@@ -13,7 +13,7 @@
 #   - PowerShell 5.1, sin acentos (mismo gotcha del repo).
 
 param(
-  [string]$Etapas = ""   # opcional: "kling,pegasus,fase0". Si se omite, se pregunta.
+  [string]$Etapas = ""   # opcional: "market,scraping,videos". Si se omite, se pregunta.
 )
 
 $root = $PSScriptRoot
@@ -39,7 +39,7 @@ function Write-EnvUtf8($lines) {
 }
 
 Write-Host ""
-Write-Host "AUTGG-FLOW . ONBOARDING  (Fase 0 . Pegasus . Kling - no gasta creditos)" -ForegroundColor Green
+Write-Host "AUTGG-FLOW . ONBOARDING  (1.Market Research  2.Scraping Competencia  3.Fabrica de Videos  4.Growth Guide - no gasta creditos)" -ForegroundColor Green
 
 # ---------- 1/6 : Prerequisitos ----------
 Paso 1 "Prerequisitos (Node, ffmpeg, Python)"
@@ -61,7 +61,7 @@ function Find-Exe($nombre) {
 
 $ffmpegPath = Find-Exe "ffmpeg"
 if (-not $ffmpegPath) {
-  Falta "ffmpeg no encontrado (obligatorio para la Etapa 4 - Kling)"
+  Falta "ffmpeg no encontrado (obligatorio para el Paso 3 - Fabrica de Videos / Kling)"
   $r = Read-Host "  Instalar ffmpeg con winget ahora? (S/n)"
   if ($r -ne 'n') {
     winget install Gyan.FFmpeg --accept-package-agreements --accept-source-agreements --silent
@@ -69,7 +69,7 @@ if (-not $ffmpegPath) {
     $ffmpegPath = Find-Exe "ffmpeg"
   }
 }
-if ($ffmpegPath) { Ok "ffmpeg: $ffmpegPath" } else { Falta "ffmpeg sigue faltando (la Etapa 4 no podra montar video)" }
+if ($ffmpegPath) { Ok "ffmpeg: $ffmpegPath" } else { Falta "ffmpeg sigue faltando (el Paso 3 no podra montar video)" }
 $ffprobePath = $null
 if ($ffmpegPath) { $ffprobePath = Join-Path (Split-Path $ffmpegPath) "ffprobe.exe" }
 
@@ -80,7 +80,7 @@ if (-not $pyCmd) {
   try { $pv = python --version 2>$null; if ($pv -match 'Python' -and $pv -notmatch 'Microsoft Store') { $pyCmd = 'python'; Ok "Python: $pv" } } catch {}
 }
 if (-not $pyCmd) {
-  Falta "Python no encontrado (lo usan la Fase 0 y los subtitulos de Kling)"
+  Falta "Python no encontrado (lo usan el Market Research y los subtitulos de la Fabrica de Videos)"
   $r = Read-Host "  Instalar Python 3.12 con winget ahora? (S/n)"
   if ($r -ne 'n') { winget install Python.Python.3.12 --accept-package-agreements --accept-source-agreements --silent; $instaladoAlgo = $true }
 }
@@ -115,7 +115,7 @@ if ($pyCmd) {
   $r = Read-Host "  Instalar paquetes Python de post-produccion (subtitulos/banner)? (S/n)"
   if ($r -ne 'n') { & $pyCmd -m pip install -r (Join-Path $root "kling\requirements.txt") --quiet; Ok "faster-whisper + Pillow instalados" }
 }
-# (Pegasus y Fase 0 no necesitan npm install: fetch nativo y Python stdlib)
+# (Pegasus y Market Research/Scraping no necesitan npm install: fetch nativo y Python stdlib)
 
 # ---------- 3/6 : Archivo .env ----------
 Paso 3 "Archivo .env (raiz, unico para las 3 etapas)"
@@ -133,20 +133,21 @@ if ($ffmpegPath -and $ffprobePath -and (Test-Path $ffprobePath)) {
   if ($cambio) { Write-EnvUtf8 $lineas; Ok "Rutas de ffmpeg escritas en el .env automaticamente" }
 }
 
-# ---------- 4/6 : Que etapas correras en esta maquina ----------
-Paso 4 "Etapas que usaras en esta maquina"
+# ---------- 4/6 : Que procesos correras en esta maquina ----------
+Paso 4 "Procesos que usaras en esta maquina"
 if ($Etapas) {
   $tok = ($Etapas.ToLower() -split '[,\s]+')
-  $usaF0 = ($tok -contains 'fase0') -or ($tok -contains 'f0') -or ($tok -contains 'research')
-  $usaP  = ($tok -contains 'pegasus') -or ($tok -contains 'p3')
-  $usaK  = ($tok -contains 'kling') -or ($tok -contains 'k4')
-  Ok ("Etapas por parametro -> Fase0={0}  Pegasus={1}  Kling={2}" -f $usaF0,$usaP,$usaK)
+  $usaMR = ($tok -contains 'market') -or ($tok -contains 'mr') -or ($tok -contains 'research') -or ($tok -contains 'apify')
+  $usaSC = ($tok -contains 'scraping') -or ($tok -contains 'sc') -or ($tok -contains 'competencia') -or ($tok -contains 'trendtrack')
+  $usaFV = ($tok -contains 'videos') -or ($tok -contains 'fv') -or ($tok -contains 'kling') -or ($tok -contains 'pegasus') -or ($tok -contains 'fabrica')
+  Ok ("Procesos por parametro -> MarketResearch={0}  ScrapingCompetencia={1}  FabricaVideos={2}" -f $usaMR,$usaSC,$usaFV)
 } else {
-  $rF0 = Read-Host "  Correras la FASE 0 (research: Apify/TrendTrack) aqui? (s/N)"
-  $rP  = Read-Host "  Correras la ETAPA 3 (Pegasus: analisis visual TwelveLabs) aqui? (s/N)"
-  $rK  = Read-Host "  Correras la ETAPA 4 (Kling: produccion de video) aqui? (S/n)"
-  $usaF0 = ($rF0 -eq 's'); $usaP = ($rP -eq 's'); $usaK = ($rK -ne 'n')
+  $rMR = Read-Host "  Paso 1 - MARKET RESEARCH (Apify) aqui? (s/N)"
+  $rSC = Read-Host "  Paso 2 - SCRAPING COMPETENCIA (TrendTrack) aqui? (s/N)"
+  $rFV = Read-Host "  Paso 3 - FABRICA DE VIDEOS (Pegasus + Kling) aqui? (S/n)"
+  $usaMR = ($rMR -eq 's'); $usaSC = ($rSC -eq 's'); $usaFV = ($rFV -ne 'n')
 }
+# (Paso 4 - Growth Guide: aun por definir, no requiere setup)
 
 # ---------- 5/6 : Claves API (solo de las etapas elegidas) ----------
 Paso 5 "Claves API (cuentas propias; nunca se muestran)"
@@ -159,27 +160,24 @@ function Valor-Env($nombre) {
 }
 
 $requeridas = @()
-if ($usaK)  { $requeridas += 'KIE_API_KEY'; $requeridas += 'FAL_KEY' }
-if ($usaF0) { $requeridas += 'APIFY_TOKEN' }
-if ($usaP)  { $requeridas += 'TL_API_KEY' }
+if ($usaMR) { $requeridas += 'APIFY_TOKEN' }                              # Paso 1
+if ($usaSC) { $requeridas += 'TRENDTRACK_TOKEN' }                         # Paso 2
+if ($usaFV) { $requeridas += 'TL_API_KEY'; $requeridas += 'KIE_API_KEY'; $requeridas += 'FAL_KEY' }  # Paso 3
 
 $faltan = @($requeridas | Where-Object { -not (Valor-Env $_) })
-if ($requeridas.Count -eq 0) { Falta "No elegiste ninguna etapa que necesite claves" }
-elseif ($faltan.Count -eq 0) { Ok "Todas las claves de tus etapas ya estan puestas" }
+if ($requeridas.Count -eq 0) { Falta "No elegiste ningun proceso que necesite claves" }
+elseif ($faltan.Count -eq 0) { Ok "Todas las claves de tus procesos ya estan puestas" }
 else {
   Write-Host "  Faltan: $($faltan -join ', '). Te abro las paginas y el .env para resolverlo AHORA:" -ForegroundColor Yellow
-  # NOTA: paginas de claves (verificar si alguna cambia). Las 3 marcadas [ok] son confiables.
-  if ($faltan -contains 'KIE_API_KEY') { Start-Process "https://kie.ai/api-key" }                          # verificar
-  if ($faltan -contains 'FAL_KEY')     { Start-Process "https://fal.ai/dashboard/keys" }                    # [ok]
-  if ($faltan -contains 'APIFY_TOKEN') { Start-Process "https://console.apify.com/settings/integrations" }  # [ok]
-  if ($faltan -contains 'TL_API_KEY')  { Start-Process "https://playground.twelvelabs.io/" }                # dashboard (la key esta dentro)
-  if ($usaF0) {
-    $r = Read-Host "  Usaras TrendTrack? Te abro su pagina tambien (s/N)"
-    if ($r -eq 's') { Start-Process "https://app.trendtrack.io/" }
-  }
-  if ($usaK) {
+  # NOTA: paginas de claves (verificar si alguna cambia). fal/apify/elevenlabs confiables; kie/twelvelabs/trendtrack al dashboard.
+  if ($faltan -contains 'APIFY_TOKEN')     { Start-Process "https://console.apify.com/settings/integrations" }  # Paso 1
+  if ($faltan -contains 'TRENDTRACK_TOKEN'){ Start-Process "https://app.trendtrack.io/" }                       # Paso 2 (dashboard)
+  if ($faltan -contains 'TL_API_KEY')      { Start-Process "https://playground.twelvelabs.io/" }                # Paso 3 Pegasus (dashboard)
+  if ($faltan -contains 'KIE_API_KEY')     { Start-Process "https://kie.ai/api-key" }                           # Paso 3 Kling
+  if ($faltan -contains 'FAL_KEY')         { Start-Process "https://fal.ai/dashboard/keys" }                    # Paso 3 Kling
+  if ($usaFV) {
     $r = Read-Host "  Usaras voz con IA (ElevenLabs)? Te abro su pagina tambien (s/N)"
-    if ($r -eq 's') { Start-Process "https://elevenlabs.io/app/settings/api-keys" }                         # [ok]
+    if ($r -eq 's') { Start-Process "https://elevenlabs.io/app/settings/api-keys" }
   }
   Start-Process notepad $envPath
   Write-Host "  En cada pagina: crea la cuenta, agrega saldo si aplica, copia la clave." -ForegroundColor Gray
@@ -194,14 +192,15 @@ else {
       if ($r -eq 'n') { break }
     }
   } while ($faltan.Count -gt 0)
-  if ($faltan.Count -eq 0) { Ok "Claves de tus etapas detectadas (nunca se muestran)" }
+  if ($faltan.Count -eq 0) { Ok "Claves de tus procesos detectadas (nunca se muestran)" }
 }
 
 # ---------- 6/6 : Chequeo final ----------
 Paso 6 "Chequeo de salud final (doctor + smoke, gasta `$0)"
 node doctor.mjs --smoke
 Write-Host ""
-Write-Host "Siguientes pasos por etapa (cada uno es un acto aparte y consciente):" -ForegroundColor Cyan
-if ($usaF0) { Write-Host "  FASE 0 : powershell -File fase0-apify\tools\apify_run.ps1 -Name reddit_diabetes   (PAGA poco por run)" }
-if ($usaP)  { Write-Host "  ETAPA 3: node pegasus\pegasus_analyze.mjs <video> <nombre>                        (PAGA al subir video)" }
-if ($usaK)  { Write-Host "  ETAPA 4: ver kling\README-ARRANQUE.md seccion 5 (flujo voz-primero)               (PAGA en pasos 4-6)" }
+Write-Host "Siguientes pasos por proceso (cada uno es un acto aparte y consciente):" -ForegroundColor Cyan
+if ($usaMR) { Write-Host "  PASO 1 Market Research   : powershell -File fase0-apify\tools\apify_run.ps1 -Name reddit_diabetes   (PAGA poco por run)" }
+if ($usaSC) { Write-Host "  PASO 2 Scraping Compet.  : python fase0-apify\scripts\trendtrack_ads.py <token> <out>  ->  score_prep + dossier  (PAGA por run)" }
+if ($usaFV) { Write-Host "  PASO 3 Fabrica de Videos : node pegasus\pegasus_analyze.mjs <video> <id>  +  kling\README-ARRANQUE.md sec.5   (PAGA al generar)" }
+Write-Host "  PASO 4 Growth Guide      : (por definir)" -ForegroundColor DarkGray

@@ -1,4 +1,4 @@
-# Pegasus — Análisis visual de video (Etapa 3)
+# Pegasus — Análisis visual de video (Paso 3 · Fábrica de Videos)
 
 Toma un video ganador (competencia o propio) y lo pasa por **TwelveLabs Pegasus** (modelo de
 video-understanding) para extraer su **estructura visual** — el "molde" que luego se combina con el

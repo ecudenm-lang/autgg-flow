@@ -1,4 +1,8 @@
-# Fase 0 — Motor de Research (Apify / TrendTrack)
+# Pasos 1 y 2 — Market Research (Apify) + Scraping Competencia (TrendTrack)
+
+> Esta carpeta cubre dos procesos del flow: **Paso 1 · Market Research** (VoC + entendimiento de mercado)
+> y **Paso 2 · Scraping Competencia** (ads de competencia vía TrendTrack + score + dossier).
+> El nombre `fase0-apify` es por herencia.
 
 Recolecta a escala **experiencias reales de clientes (VoC)** y **lo que hace la competencia**, para
 alimentar la "ficha del Senior" (avatares, deseos, mensajes, nivel de conciencia) con datos reales.

@@ -1,5 +1,5 @@
 /**
- * trendtrack_score_prep.mjs — ETAPA 2 (prep): arma la planilla de SCORE DE COINCIDENCIA
+ * trendtrack_score_prep.mjs — PASO 2 (Scraping Competencia, prep): arma la planilla de SCORE DE COINCIDENCIA
  * a partir de la salida de TrendTrack, con cadena de fallback para la fuente del guion.
  *
  * FUENTE DEL GUION (por ad, en orden de preferencia):

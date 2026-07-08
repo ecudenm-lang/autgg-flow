@@ -1,12 +1,14 @@
 # AutGG Flow — el pipeline creativo completo (portable)
 
-Mono-repo con las **3 etapas ejecutables** del sistema AutGG, listas para correr en una máquina nueva:
+Mono-repo con los **4 procesos** del sistema AutGG, listos para correr en una máquina nueva:
 
 ```
-FASE 0 ─────────► ETAPA 3 ─────────► ETAPA 4
-Research           Análisis visual     Producción de video
-(Apify/TrendTrack)  (Pegasus/TwelveLabs) (Kling 3.0 + nano-banana)
-   VoC + competencia   video → JSON        guion + voz → .mp4 montado
+PASO 1 ──────────► PASO 2 ──────────► PASO 3 ──────────► PASO 4
+Market Research     Scraping           Fábrica de Videos   Growth Guide
+                    Competencia
+(Apify: VoC +       (TrendTrack: ads   (Pegasus análisis   (registro:
+ avatares/deseos)    + score + dossier)  + Kling producción) hit rate/patrones)
+                                                            [por definir]
 ```
 
 > El **orquestador** (board en Gethookd, scoring de guiones, generación de prompts) lo maneja Claude
@@ -43,11 +45,14 @@ Cadena de fallback del guion: **transcript → copy → Pegasus** (ver `fase0-ap
 
 ## Estructura
 
-| Carpeta | Etapa | Qué hace | Stack |
+| Carpeta | Proceso(s) | Qué hace | Stack |
 |---|---|---|---|
-| `fase0-apify/` | Fase 0 | Scraping de VoC + competencia (Reddit/TikTok/YouTube/Amazon/ads) | PowerShell + Python (stdlib) |
-| `pegasus/` | Etapa 3 | Analiza un video ganador → JSON de estructura visual | Node (fetch nativo) |
-| `kling/` | Etapa 4 | Guion + voz → video 9:16 montado + subtítulos | Node + ffmpeg + Python (postpro) |
+| `fase0-apify/` | **Paso 1 · Market Research** + **Paso 2 · Scraping Competencia** | VoC + entendimiento de mercado; ads de competencia (TrendTrack) + score + dossier | PowerShell + Python + Node |
+| `pegasus/` | **Paso 3 · Fábrica de Videos** (análisis) | Analiza un video ganador → JSON de estructura visual | Node (fetch nativo) |
+| `kling/` | **Paso 3 · Fábrica de Videos** (producción) | Guion + voz → video 9:16 montado + subtítulos | Node + ffmpeg + Python (postpro) |
+
+> **Nota:** las carpetas se llaman `fase0-apify/`, `pegasus/`, `kling/` por herencia; los **procesos** son
+> los 4 de arriba. `fase0-apify/` cubre los Pasos 1 y 2; `pegasus/` + `kling/` cubren el Paso 3.
 
 Cada carpeta tiene su propio README con el detalle.
 

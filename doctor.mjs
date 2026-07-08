@@ -1,5 +1,5 @@
 /**
- * doctor.mjs — Chequeo de salud del FLOW COMPLETO (Fase 0 · Pegasus · Kling). GASTA $0.
+ * doctor.mjs — Chequeo de salud del FLOW COMPLETO (4 pasos: Market Research · Scraping Competencia · Fábrica de Videos · Growth Guide). GASTA $0.
  *
  *   node doctor.mjs           → verifica herramientas y claves de las 3 etapas
  *   node doctor.mjs --smoke   → además valida los JSON de ejemplo de kling
@@ -61,20 +61,24 @@ if (pyBin) {
 const klingMods = existsSync(join(ROOT, "kling", "node_modules", "@fal-ai", "client"));
 add("kling deps (npm)", klingMods ? OK : BAD, klingMods ? "@fal-ai/client presente" : "cd kling && npm install");
 
-// ── FASE 0 (Apify research) ──────────────────────────────────────────────────
-head("FASE 0 — Research (Apify / TrendTrack)");
-add("APIFY_TOKEN", env.APIFY_TOKEN ? OK : WARN, env.APIFY_TOKEN ? mask(env.APIFY_TOKEN) : "solo si corres scraping Apify");
+// ── PASO 1 — Market Research (Apify) ─────────────────────────────────────────
+head("PASO 1 — Market Research (Apify)");
+add("APIFY_TOKEN", env.APIFY_TOKEN ? OK : WARN, env.APIFY_TOKEN ? mask(env.APIFY_TOKEN) : "solo si corres research/scraping Apify");
+
+// ── PASO 2 — Scraping Competencia (TrendTrack) ───────────────────────────────
+head("PASO 2 — Scraping Competencia (TrendTrack)");
 add("TRENDTRACK_TOKEN", env.TRENDTRACK_TOKEN ? OK : WARN, env.TRENDTRACK_TOKEN ? mask(env.TRENDTRACK_TOKEN) : "solo si usas TrendTrack");
 
-// ── ETAPA 3 (Pegasus) ────────────────────────────────────────────────────────
-head("ETAPA 3 — Pegasus (análisis visual)");
-add("TL_API_KEY", env.TL_API_KEY ? OK : WARN, env.TL_API_KEY ? mask(env.TL_API_KEY) : "TwelveLabs — solo si analizas video");
+// ── PASO 3 — Fábrica de Videos (Pegasus + Kling) ─────────────────────────────
+head("PASO 3 — Fábrica de Videos (Pegasus + Kling)");
+add("TL_API_KEY (Pegasus)", env.TL_API_KEY ? OK : WARN, env.TL_API_KEY ? mask(env.TL_API_KEY) : "TwelveLabs — solo si analizas video");
+add("KIE_API_KEY (Kling)", env.KIE_API_KEY ? OK : BAD, mask(env.KIE_API_KEY));
+add("FAL_KEY (Kling)", env.FAL_KEY ? OK : BAD, mask(env.FAL_KEY));
+add("ELEVENLABS_API_KEY (TTS)", env.ELEVENLABS_API_KEY ? OK : WARN, env.ELEVENLABS_API_KEY ? mask(env.ELEVENLABS_API_KEY) : "opcional — voz IA");
 
-// ── ETAPA 4 (Kling) ──────────────────────────────────────────────────────────
-head("ETAPA 4 — Kling (producción de video)");
-add("KIE_API_KEY", env.KIE_API_KEY ? OK : BAD, mask(env.KIE_API_KEY));
-add("FAL_KEY", env.FAL_KEY ? OK : BAD, mask(env.FAL_KEY));
-add("ELEVENLABS_API_KEY", env.ELEVENLABS_API_KEY ? OK : WARN, env.ELEVENLABS_API_KEY ? mask(env.ELEVENLABS_API_KEY) : "opcional — TTS");
+// ── PASO 4 — Growth Guide ────────────────────────────────────────────────────
+head("PASO 4 — Growth Guide (registro)");
+add("(por definir)", WARN, "el registro historico aun no esta implementado");
 
 // ── SMOKE ────────────────────────────────────────────────────────────────────
 if (process.argv.includes("--smoke")) {
@@ -94,7 +98,7 @@ if (process.argv.includes("--smoke")) {
 }
 
 // ── Reporte ──────────────────────────────────────────────────────────────────
-console.log(`\n${B}AUTGG-FLOW · DOCTOR${X}   (Fase 0 · Pegasus · Kling — no gasta créditos)\n`);
+console.log(`\n${B}AUTGG-FLOW · DOCTOR${X}   (1.Market Research · 2.Scraping Competencia · 3.Fábrica de Videos · 4.Growth Guide — no gasta créditos)\n`);
 for (const r of rows) {
   if (r.header) { console.log(`\n${C}${B}▸ ${r.header}${X}`); continue; }
   console.log(`  ${r.status}  ${B}${r.name.padEnd(24)}${X} ${r.detail}`);
