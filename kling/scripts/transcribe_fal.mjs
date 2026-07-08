@@ -22,7 +22,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve, extname, basename } from "path";
 
 const FAL_KEY = process.env.FAL_KEY;
-if (!FAL_KEY) { console.error('\n❌  FAL_KEY no encontrado.\n    $env:FAL_KEY = "tu-clave"\n'); process.exit(1); }
+if (!FAL_KEY) { console.error('\n❌  FAL_KEY no encontrado.\n    Carga tu .env:  . .\\load_env.ps1   (o setea a mano:  $env:FAL_KEY = "tu-clave")\n'); process.exit(1); }
 fal.config({ credentials: FAL_KEY });
 
 const inArg  = process.argv[2];

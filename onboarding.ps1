@@ -159,22 +159,28 @@ function Valor-Env($nombre) {
   return $v.Trim()
 }
 
+# Claves OBLIGATORIAS por proceso. En Paso 3, solo KIE+FAL (producir) son obligatorias;
+# TL_API_KEY (Pegasus, analisis de video) es OPCIONAL - igual que lo trata el doctor.
 $requeridas = @()
 if ($usaMR) { $requeridas += 'APIFY_TOKEN' }                              # Paso 1
 if ($usaSC) { $requeridas += 'TRENDTRACK_TOKEN' }                         # Paso 2
-if ($usaFV) { $requeridas += 'TL_API_KEY'; $requeridas += 'KIE_API_KEY'; $requeridas += 'FAL_KEY' }  # Paso 3
+if ($usaFV) { $requeridas += 'KIE_API_KEY'; $requeridas += 'FAL_KEY' }    # Paso 3 (producir con Kling)
 
 $faltan = @($requeridas | Where-Object { -not (Valor-Env $_) })
 if ($requeridas.Count -eq 0) { Falta "No elegiste ningun proceso que necesite claves" }
-elseif ($faltan.Count -eq 0) { Ok "Todas las claves de tus procesos ya estan puestas" }
+elseif ($faltan.Count -eq 0) { Ok "Todas las claves obligatorias de tus procesos ya estan puestas" }
 else {
   Write-Host "  Faltan: $($faltan -join ', '). Te abro las paginas y el .env para resolverlo AHORA:" -ForegroundColor Yellow
-  # NOTA: paginas de claves (verificar si alguna cambia). fal/apify/elevenlabs confiables; kie/twelvelabs/trendtrack al dashboard.
+  # NOTA: paginas de claves (verificar si alguna cambia). fal/apify/elevenlabs confiables; kie/trendtrack al dashboard.
   if ($faltan -contains 'APIFY_TOKEN')     { Start-Process "https://console.apify.com/settings/integrations" }  # Paso 1
   if ($faltan -contains 'TRENDTRACK_TOKEN'){ Start-Process "https://app.trendtrack.io/" }                       # Paso 2 (dashboard)
-  if ($faltan -contains 'TL_API_KEY')      { Start-Process "https://playground.twelvelabs.io/" }                # Paso 3 Pegasus (dashboard)
   if ($faltan -contains 'KIE_API_KEY')     { Start-Process "https://kie.ai/api-key" }                           # Paso 3 Kling
   if ($faltan -contains 'FAL_KEY')         { Start-Process "https://fal.ai/dashboard/keys" }                    # Paso 3 Kling
+  # OPCIONALES del Paso 3 (no bloquean): Pegasus y voz IA
+  if ($usaFV -and -not (Valor-Env 'TL_API_KEY')) {
+    $r = Read-Host "  Analizaras videos de competencia con Pegasus (TwelveLabs)? Te abro su pagina (s/N)"
+    if ($r -eq 's') { Start-Process "https://playground.twelvelabs.io/" }
+  }
   if ($usaFV) {
     $r = Read-Host "  Usaras voz con IA (ElevenLabs)? Te abro su pagina tambien (s/N)"
     if ($r -eq 's') { Start-Process "https://elevenlabs.io/app/settings/api-keys" }
