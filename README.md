@@ -107,13 +107,14 @@ npm run smoke           # además valida los JSON de ejemplo
 powershell -File fase0-apify\tools\apify_run.ps1 -Name reddit_diabetes
 ```
 
-**Etapa 3 — Pegasus (análisis visual de un video):**
+**Paso 3 · Fábrica de Videos — Pegasus (análisis visual de un video):**
 ```powershell
 node pegasus\pegasus_analyze.mjs "https://.../ad_competidor.mp4" competidor_ad42
 # → output/pegasus_competidor_ad42.json
 ```
 
-**Etapa 4 — Kling (producir el video):** ver `kling/README-ARRANQUE.md` (flujo voz-primero paso a paso).
+**Paso 3 · Fábrica de Videos — Kling (producir el video):** ver `kling/README-ARRANQUE.md` (flujo voz-primero paso a paso).
+> Si operas el pipeline con un asistente IA, su **manual operativo** (reglas, costos, QC, subtítulos, lip-sync) es **`kling/MANUAL_PIPELINE_CLAUDE.md`**.
 
 ---
 

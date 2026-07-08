@@ -132,11 +132,22 @@ node scripts/assemble_voiced.mjs demo voz.mp3 clips/demo clips/demo_sync config/
 
 ## 6. Post-producción (opcional)
 
-**Subtítulos estilo CapCut** (quema los subs en el video):
+**Subtítulos — dos rutas según de dónde salió la voz:**
+
+| Tu voz vino de… | Usa | Por qué |
+|---|---|---|
+| **La grabaste tú** (voz.mp3 propio) | `postpro/capcut_subs.py` (whisper) | es la única fuente de timing disponible |
+| **ElevenLabs** (`gen_vo.mjs`) | `scripts/make_subs.mjs` modo EL (`--words config/words_<ad>.json`) | timing exacto de ElevenLabs; **no pierde palabras** (whisper suelta la marca en el CTA) |
+
 ```powershell
+# Ruta A — voz grabada por ti (whisper):
 python postpro/capcut_subs.py output/final_demo_voiced.mp4 --lang es
 # La 1ª vez descarga el modelo whisper (~1.5GB) a assets/hf_cache/
+
+# Ruta B — voz de ElevenLabs (recomendada si usaste gen_vo.mjs):
+node scripts/make_subs.mjs <ad> --words config/words_<ad>.json --cuts config/cuts_<ad>.json --out A
 ```
+> Detalle completo del flujo con ElevenLabs, QC de keyframes, reintentos y lip-sync: **`kling/MANUAL_PIPELINE_CLAUDE.md`**.
 
 **Voz con IA (TTS)** en vez de grabarte:
 ```powershell
