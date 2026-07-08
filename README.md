@@ -60,13 +60,16 @@ Cada carpeta tiene su propio README con el detalle.
 
 ## Arranque rápido (Windows)
 
-> **¿Máquina nueva?** Un solo comando hace todo (guiado, gasta $0):
+> **¿Máquina nueva? La forma más fácil:** doble clic en **`INICIAR.cmd`** — se abre solo el asistente
+> guiado (no necesitas saber PowerShell ni escribir nada). Gasta $0.
+>
+> Equivalente por consola (si prefieres):
 > ```powershell
 > powershell -ExecutionPolicy Bypass -File .\onboarding.ps1
 > ```
-> Detecta/instala prerequisitos (preguntando), crea el `.env`, autocompleta ffmpeg, te ayuda a poner
-> tus claves y corre el doctor. Scripteable: `-Etapas kling,pegasus`. Los pasos manuales de abajo
-> siguen valiendo si prefieres hacerlo a mano.
+> El asistente detecta/instala prerequisitos (preguntando), crea el `.env`, autocompleta ffmpeg, te ayuda
+> a poner tus claves y corre el doctor. Scripteable: `-Etapas kling,pegasus`. Los pasos manuales de abajo
+> siguen valiendo si prefieres hacerlo a mano leyendo (esto es Markdown, sí se lee sin ejecutar nada).
 
 ### 1. Prerequisitos
 - **Node.js ≥ 18** (https://nodejs.org)
