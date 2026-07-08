@@ -63,6 +63,10 @@ Cada carpeta tiene su propio README con el detalle.
 > **¿Máquina nueva? La forma más fácil:** doble clic en **`INICIAR.cmd`** — se abre solo el asistente
 > guiado (no necesitas saber PowerShell ni escribir nada). Gasta $0.
 >
+> 🛡️ *La 1ª vez Windows puede mostrar una advertencia azul de seguridad (porque el archivo vino de un ZIP
+> de internet). Es normal: elige **Más información → Ejecutar de todas formas**. Para evitarla del todo,
+> antes de descomprimir: clic derecho en el ZIP → **Propiedades** → marca **Desbloquear** → Aceptar, y recién ahí extrae.*
+>
 > Equivalente por consola (si prefieres):
 > ```powershell
 > powershell -ExecutionPolicy Bypass -File .\onboarding.ps1
