@@ -39,7 +39,7 @@ const POLL_TIMEOUT_MS = 10 * 60_000;
 const CONFIRM_TIMEOUT = 30_000;
 
 const KEY = process.env.KIE_API_KEY;
-if (!KEY) { console.error('\n❌  KIE_API_KEY no encontrado.\n    $env:KIE_API_KEY = "tu-clave"\n'); process.exit(1); }
+if (!KEY) { console.error('\n❌  KIE_API_KEY no encontrado.\n    Carga tu .env:  . .\\load_env.ps1   (o setea a mano:  $env:KIE_API_KEY = "tu-clave")\n'); process.exit(1); }
 
 const inputFile = process.argv[2] ?? "batch_input.json";
 const clipsDirName = process.argv[3] ?? "clips/kie";

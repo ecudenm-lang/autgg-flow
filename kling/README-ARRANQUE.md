@@ -41,9 +41,15 @@ marca **"Add Python to PATH"** al instalar. Verifica: `python --version`.
 
 ## 2. Descargar el kit e instalar dependencias
 
+Opción A — con git:
 ```powershell
-git clone https://github.com/ecudenm-lang/klingaut-starter.git
-cd klingaut-starter
+git clone https://github.com/ecudenm-lang/autgg-flow.git
+cd autgg-flow\kling
+```
+Opción B — sin git: en GitHub, botón verde **Code → Download ZIP**, descomprime, y entra a la carpeta `autgg-flow\kling`.
+
+Luego instala dependencias:
+```powershell
 npm install
 # Solo si usarás subtítulos:
 pip install -r requirements.txt
@@ -86,14 +92,22 @@ npm run smoke
 
 La **voz grabada manda el timing**: cada toma dura lo que su frase narrada.
 
+> ⚠️ **La capa creativa necesita un asistente IA (Claude).** Los scripts son los *músculos*; el *cerebro*
+> (afinar los cortes del paso 2 y sobre todo escribir el `kf_prompt` / `anim_prompt` de cada toma en el
+> paso 4) está pensado para hacerse **con un asistente IA como copiloto**, usando `kling/CLAUDE.md` como guía
+> (anatomía de prompts, roles de estilo, negative_prompt, reglas de coherencia). Si no usas un asistente,
+> copia la estructura de `examples/keyframes_input_demo.json` y el método de `CLAUDE.md` a mano.
+
 ```powershell
 # (0) Graba tu voz completa del guion en un solo archivo, ej: voz.mp3
 
 # (1) Transcribir la voz  → config/transcript_demo.json   (barato)
 node scripts/transcribe_fal.mjs voz.mp3 demo es
 
-# (2) A mano: crea config/cuts_demo.json  = [{n,start,end,guion}] por toma,
-#     usando los tiempos reales del transcript. (Ver examples/cuts_demo.json)
+# (2) PROPONER los cortes automáticamente desde el transcript → config/cuts_demo.json
+node scripts/build_cuts.mjs demo
+#     Luego ABRE config/cuts_demo.json y AJÚSTALO (una toma = una frase/beat).
+#     (build_cuts te evita la hoja en blanco; el ajuste fino es tuyo.)
 
 # (3) Cortar la voz por toma  → audio/demo/seg_XX.wav
 node scripts/cut_audio.mjs config/cuts_demo.json voz.mp3 audio/demo

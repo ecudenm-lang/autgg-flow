@@ -34,7 +34,7 @@ const EST_BLOCKS = 2;               // estimación para tabla (clips ≤10s)
 const CONFIRM_TIMEOUT = 30_000;
 
 const FAL_KEY = process.env.FAL_KEY;
-if (!FAL_KEY) { console.error('\n❌  FAL_KEY no encontrado.\n'); process.exit(1); }
+if (!FAL_KEY) { console.error('\n❌  FAL_KEY no encontrado.\n    Carga tu .env:  . .\\load_env.ps1   (o setea a mano:  $env:FAL_KEY = "tu-clave")\n'); process.exit(1); }
 fal.config({ credentials: FAL_KEY });
 
 const inputFile = process.argv[2] ?? "lipsync_input.json";
