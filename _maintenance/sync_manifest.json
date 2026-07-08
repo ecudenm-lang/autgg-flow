@@ -1,0 +1,170 @@
+{
+  "_nota": "Mapa repo <- produccion para sync_check.mjs. 'patched'=true significa que el repo tiene ediciones de portabilidad intencionales (se espera que difiera del contenido de prod). 'prodHash' = hash de prod al ultimo sync (se fija con --bless). Roots overridables por env: PROD_VIDEOS_KLING / PROD_ITERACIONKING / PROD_APIFY.",
+  "roots": {
+    "videos-kling": "D:/videos-kling",
+    "iteracionking": "D:/Iteracionking",
+    "apify": "D:/Apify"
+  },
+  "files": [
+    {
+      "repo": "kling/scripts/gen_vo.mjs",
+      "root": "videos-kling",
+      "prod": "gen_vo.mjs",
+      "patched": true,
+      "prodHash": "11b2799950d7d777",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/make_subs.mjs",
+      "root": "videos-kling",
+      "prod": "make_subs.mjs",
+      "patched": false,
+      "prodHash": "b20949839a3ebfd7",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/transcribe_fal.mjs",
+      "root": "videos-kling",
+      "prod": "transcribe_fal.mjs",
+      "patched": true,
+      "prodHash": "e709e3f1c7117ead",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/cut_audio.mjs",
+      "root": "videos-kling",
+      "prod": "cut_audio.mjs",
+      "patched": true,
+      "prodHash": "3619c959d946ec21",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/assemble_voiced.mjs",
+      "root": "videos-kling",
+      "prod": "assemble_voiced.mjs",
+      "patched": true,
+      "prodHash": "b66b1a8322dd6545",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/batch_keyframes_kie.mjs",
+      "root": "videos-kling",
+      "prod": "batch_keyframes_kie.mjs",
+      "patched": true,
+      "prodHash": "e81af758abf49dcc",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/batch_kling3_kie.mjs",
+      "root": "videos-kling",
+      "prod": "batch_kling3_kie.mjs",
+      "patched": true,
+      "prodHash": "50b947a4d26c87ab",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/batch_lipsync_fal.mjs",
+      "root": "videos-kling",
+      "prod": "batch_lipsync_fal.mjs",
+      "patched": true,
+      "prodHash": "24005eca4a9ef7a0",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/batch_grok_kie.mjs",
+      "root": "videos-kling",
+      "prod": "batch_grok_kie.mjs",
+      "patched": false,
+      "prodHash": "982836d3266a6bbd",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/scripts/upload_asset.mjs",
+      "root": "videos-kling",
+      "prod": "upload_asset.mjs",
+      "patched": false,
+      "prodHash": "4148e72eb88d4649",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/CLAUDE.md",
+      "root": "videos-kling",
+      "prod": "CLAUDE.md",
+      "patched": false,
+      "prodHash": "a0e44ed0dfaf2cfe",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/MANUAL_PIPELINE_CLAUDE.md",
+      "root": "videos-kling",
+      "prod": "MANUAL_PIPELINE_CLAUDE.md",
+      "patched": false,
+      "prodHash": "f20ddd8d823eea61",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/postpro/capcut_subs.py",
+      "root": "iteracionking",
+      "prod": "scripts/capcut_subs.py",
+      "patched": true,
+      "prodHash": "f0664d9a460c0b9e",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/postpro/whisper_segments.py",
+      "root": "iteracionking",
+      "prod": "scripts/whisper_segments.py",
+      "patched": true,
+      "prodHash": "e0a82a53f1b1285d",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/postpro/banner_hook.py",
+      "root": "iteracionking",
+      "prod": "tools/banner_hook.py",
+      "patched": true,
+      "prodHash": "701b70262a2490d9",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "kling/postpro/tts_eleven.ps1",
+      "root": "iteracionking",
+      "prod": "tools/tts_eleven.ps1",
+      "patched": true,
+      "prodHash": "27290db1fe02e5e5",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "fase0-apify/tools/apify_run.ps1",
+      "root": "apify",
+      "prod": "tools/apify_run.ps1",
+      "patched": true,
+      "prodHash": "77c1c737fd4a0d1b",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "fase0-apify/scripts/trendtrack_ads.py",
+      "root": "apify",
+      "prod": "biozentra/scripts/trendtrack_ads.py",
+      "patched": false,
+      "prodHash": "842d58f2cec18606",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "fase0-apify/scripts/trendtrack_videos.py",
+      "root": "apify",
+      "prod": "biozentra/scripts/trendtrack_videos.py",
+      "patched": false,
+      "prodHash": "debb9020e680b8e2",
+      "blessedAt": "manual"
+    },
+    {
+      "repo": "fase0-apify/scripts/trendtrack_discover.py",
+      "root": "apify",
+      "prod": "biozentra/scripts/trendtrack_discover.py",
+      "patched": false,
+      "prodHash": "eaa231437a44849d",
+      "blessedAt": "manual"
+    }
+  ]
+}
